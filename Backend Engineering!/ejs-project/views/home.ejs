@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finger+Paint&family=Kalam:wght@300;400;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .navBar {
+            display: flex;
+            height: 10%;
+            width: 50%;
+            background: none;
+            box-shadow: inset 0 0 60px 2px rgba(128, 128, 128, 0.266);
+            margin: 2%;
+            padding: 0;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: center;
+            gap: 3%;
+            border: 1px solid grey;
+            backdrop-filter: blur(25px);
+            z-index: 1;
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+        }
+
+        .navBar:hover {
+            transform: scale(1);
+            box-shadow: inset 0 0 120px 2px rgba(128, 128, 128, 0.266);
+        }
+
+        .navBtn {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            padding: 1%;
+            height: 50%;
+            width: fit-content;
+            border-style: none;
+            background: none;
+            color: white;
+            font-weight: 400;
+            font-family: DM Sans;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .navBtn:hover {
+            border-radius: 10px;
+            box-shadow: inset 0 0 12px 2px rgba(128, 128, 128, 0.253);
+            transform: scale(1.1);
+            border: 1px ridge grey;
+            backdrop-filter: blur(25px);
+        }
+
+        .navBtnLogo {
+            width: 1%;
+        }
+
+        .bgTitle {
+            color: white;
+            margin: 0;
+            z-index: 0;
+            transform: translateY(30%) scale(3);
+            font-family: DM Sans;
+            font-weight: 600;
+        }
+
+        .mainContent {
+            transform: translateY(10%);
+            display: flex;
+            height: 50%;
+            width: 90%;
+        }
+
+        .cards {
+            display: flex;
+            background-color: none;
+            height: 100%;
+            width: 95%;
+            border: 1px solid grey;
+            backdrop-filter: blur(25px);
+            border-radius: 15px;
+            box-shadow: inset 0 0 100px 1px rgba(128, 128, 128, 0.318);
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+            margin: 0;
+            justify-content: center;
+        }
+
+        .cards:hover {
+            transform: scale(1);
+            box-shadow: inset 0 0 200px 1px rgba(128, 128, 128, 0.410);
+        }
+
+        .cardTitle {
+            color: rgb(252, 250, 250);
+            font-weight: 100;
+            font-family: system-ui;
+        }
+
+        .cardImg {
+            color: white;
+            height: 30%;
+            margin: 5%;
+        }
+
+    </style>
+    <body>
+        <%- include('./partials/header') %>
+        <nav class="navBar">
+            <button class="navBtn">Home</button>
+            <button class="navBtn">Subscribe</button>
+            <button class="navBtn">Rooms</button>
+        </nav>
+        <h1 class="bgTitle">
+            <span class="Watch">Watch </span>
+            <span class="Party">Party</span>
+        </h1>
+        <main class="mainContent">
+            <div class="cards">
+            </div>
+            <div class="cards">
+                <span class="cardImg">
+                </span>
+            </div>
+            <div class="cards">
+                <span class="cardImg">
+                </span>
+            </div>
+            <div class="cards">
+                <span class="cardImg">
+                </span>
+            </div>
+        </main>
+    </body>
+</html>

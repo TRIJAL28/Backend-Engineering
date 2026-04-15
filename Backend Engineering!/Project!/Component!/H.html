@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Finger+Paint&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Kalam:wght@300;400;700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<style>
+    body{
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background: url(https://images.unsplash.com/photo-1704019483449-57278d210bae?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+    }
+    nav{
+        height: 8%;
+        width: 70%;
+        margin-bottom: 2.5%;
+        display: flex;
+        background-color: none;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        border-radius: 100px;
+        border: 1px ridge rgba(128, 128, 128, 0.532);
+        backdrop-filter: blur(25px);
+        box-shadow: inset 0 0 20px 1px rgba(255, 255, 255, 0.096);
+        transition: all 0.3s ease;
+    }
+    nav:hover{
+        transform: scale(1.075);
+        backdrop-filter: blur(50px);
+        height: 10%;
+        width: 75%;
+        border-style: outset;
+    }
+    .nav-btn{
+        padding: 1%;
+        border-radius: 50px;
+        width: 10%;
+        border: none;
+        background: none;
+        color: rgb(255, 255, 255);
+        font-family: Segoe UI;
+        font-weight: 300;
+        transition: all 0.3s ease;
+    }
+    .nav-btn:hover{
+        background: rgba(128, 128, 128, 0.158);
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.267);
+    }
+    .main-container{
+        width: 80%;
+        height: 70%;
+        background: none;
+        display: flex;
+        border-radius: 25px;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+    }
+    .profile-card{
+        height: 80%;
+        width: 25%;
+        background: linear-gradient(to bottom, rgba(128, 128, 128, 0.204), rgba(0, 0, 0, 0.127), rgba(128, 128, 128, 0.226));
+        border-radius: 25px;
+        border: 1px outset rgba(203, 202, 202, 0.562);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2%;
+        backdrop-filter: blur(25px);
+        transition: all 0.3s ease;
+    }
+    .profile-card:hover{
+        height: 90%;
+        width: 30%;
+        backdrop-filter: blur(50px);
+    }
+    #profile-img{
+        width: 50%;
+        border-radius: 50%;
+        border: 2px dotted white;
+        transition: all 0.3s ease;
+        filter: grayscale(100%) contrast(150%);
+    }
+    #profile-img:hover{
+        border: 2px solid white;
+        box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.325);
+        transform: scale(1.2) rotate(20deg);
+    }
+    .card-details{
+        width: 80%;
+        display: flex;
+        align-items: left;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #location{
+        filter: invert(1);
+    }
+    #mail{
+        filter: invert(1);
+    }
+    #phone{
+        filter: invert(1);
+    }
+    .info{
+        font-family: DM Sans;
+        font-weight: 100;
+        display: flex;
+        gap: 4%;
+    }
+    .my-desc{
+        height: 80%;
+        width: 60%;
+        background: linear-gradient(to bottom, rgba(128, 128, 128, 0.204), rgba(0, 0, 0, 0.127), rgba(128, 128, 128, 0.226));
+        box-shadow: inset 0 0 100px 2px rgba(128, 128, 128, 0.471);
+        border: 1px outset rgb(164, 162, 162);
+        color: white;
+        border-radius: 25px;
+        display: flex;
+        align-items: left;
+        justify-content: flex-start;
+        backdrop-filter: blur(25px);
+        transition: all 0.3s ease;
+    }
+    .my-desc:hover{
+        height: 90%;
+        width: 70%;
+    }
+    .greet{
+        background: rgba(128, 128, 128, 0.384);
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    .greet:hover{
+        width: 35%;
+    }
+    .greet:hover > #desc-heading{
+        font-size: 400%;
+    }
+    #desc-heading{
+        font-family: DM Sans;
+        font-size: 325%;
+        margin-left: 15%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+    #tagline{
+        font-style: italic;
+        color: white;
+        font-family: DM Sans;
+        transform: scale(1.5);
+    }
+</style>
+<body>
+    <nav>
+        <button class="nav-btn" id="about">About Me</button>
+        <button class="nav-btn" id="work">My Work</button>
+        <button class="nav-btn" id="contact">Contact</button>
+    </nav>
+    <div class="main-container">
+        <div class="profile-card">
+            <img src="Profile.jpeg" alt="" id="profile-img">
+            <div class="card-details">
+                <h5 class="info"><img id="location" width="20" height="20" src="https://img.icons8.com/material-sharp/24/marker.png" alt="marker"/>Agra, India</h5>
+                <h5 class="info"><img id="mail" width="20" height="20" src="https://img.icons8.com/material-rounded/24/mail.png" alt="mail"/>luckysharma0729@gmail.com</h5>
+                <h5 class="info"><img id="phone" width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/phone--v1.png" alt="phone--v1"/>+91 7668804952</h5>
+            </div>
+        </div>
+        <div class="my-desc">
+            <div class="greet">
+                <h1 id="desc-heading">Hello,</h1>
+                <h1 id="desc-heading">I am Lucky!</h1>
+            </div>
+            <div class="role-info">
+                <h3 class="roles">UI/UX Designer</h3>
+                <h3 class="roles">Fullstack Developer</h3>
+                <div class="skill-info">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer id="tagline">"Think. Design. Repeat!"</footer>
+</body>
+</html>

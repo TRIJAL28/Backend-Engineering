@@ -1,0 +1,16 @@
+{
+  "name": "expresstutorial",
+  "version": "1.0.0",
+  "description": "A guide or tutorial on how to use express as a backend API managing language!",
+  "license": "ISC",
+  "author": "Lucky Sharma",
+  "type": "commonjs",
+  "main": "Express1.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
